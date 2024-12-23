@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Happy Valentine Day :)</title>
+    <link
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <style>
+      #audio {
+          display: none;
+      }
+  </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="one">
+        <h1 class="one">
+          Hey
+          <span id="name">xyz</span>
+        </h1>
+        <p class="two" id="greetingText">I really like your name btw!</p>
+      </div>
+      <div class="three">
+        <p>It's a Valentine day today</p>
+      </div>
+      <div class="four">
+        <div class="text-box">
+          <p class="hbd-chatbox">
+            Happy Valentine's Day!! Yeee! Love and blah blah...
+          </p>
+          <p class="fake-btn">Send</p>
+        </div>
+      </div>
+      <div class="five">
+        <p class="idea-1">That's what I was going to do.</p>
+        <p class="idea-2">But then I stopped.</p>
+        <p class="idea-3">
+          I realised, I wanted to do something <strong>special</strong>.
+        </p>
+        <p class="idea-4">Because,</p>
+        <p class="idea-5" id="specialText">
+          You are Special
+          <span>:)</span>
+        </p>
+        <p class="idea-6">
+          <span>S</span>
+          <span>O</span>
+        </p>
+      </div>
+      <div class="six">
+        <img src="img/vector.jpg" alt="" class = "girl-dp" id="imagePath" />
+        <div class="wish">
+          <h3 class="wish-hbd">Happy Valentine's Day Queen</h3>
+          <h5 id="wishText">kuch kuch</h5>
+          <audio id="audio" autoplay loop muted>
+          <!-- <audio id="audio" controls muted autoplay> -->
+            <source src="./song/Perfect-(Mr-Jat.in).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        </div>
+      </div>
+      <div class="seven">
+        <div class="baloons">
+          <img src="img/balloon.svg" alt="" />
+          <img src="img/smiling.svg" />
+          <img src="img/heart.svg" />
+          <img src="img/balloon.svg" alt="" />
+       
+          <img src="img/heart.svg" />
+          <img src="img/balloon.svg" alt="" />
+          <img src="img/music-note.svg" alt="" />
+          <img src="img/heart.svg" />
+          <img src="img/balloon.svg" alt="" />
+          <img src="img/heart.svg" />
+          <img src="img/balloon.svg" alt="" />
+          <img src="img/heart.svg" />
+          <img src="img/heart.svg" />
+          <img src="img/music-note.svg" alt="" />
+          <img src="img/smiling.svg" />
+          <img src="img/happy.svg" alt="" />
+          <img src="img/balloon.svg" alt="" />
+          <img src="img/heart.svg" />
+          <img src="img/smiling.svg" />
+        
+        </div>
+      </div>
+      <div class="eight">
+        <svg viewBox="0 0 40 40" xmlns="/heart.svg.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+      </div>
+      <!-- <div class="nine">
+        <p>Okay, now come back and tell me if you liked it.</p>
+        <p id="replay">Or click, if you want to watch it again.</p>
+        <p class="last-smile">:)</p>
+        <p>https://github.com/swapniltake1/valentine-day-special </p>
+      </div> -->
+      <div id="nine"></div> 
+    </div>
+    <!-- <script>
+   
+      function playAudioAfterDelay(delay) {
+          setTimeout(function() {
+              var audio = document.getElementById("audio");
+              audio.muted = false;
+              audio.play().catch(function(error) {
+                  console.error("Error playing audio:", error);
+              });
+          }, delay);
+      }
+
+      playAudioAfterDelay(32000); 
+  </script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var audio = document.getElementById("audio");
+  
+      // Try to play the audio immediately
+      audio.play().then(() => {
+        console.log("Audio playing automatically.");
+        audio.muted = false; // Unmute the audio if autoplay succeeds
+      }).catch(function (error) {
+        console.warn("Autoplay blocked. Waiting for user interaction...");
+  
+        // Wait for user interaction to play the audio
+        document.body.addEventListener("click", function handleClick() {
+          audio.muted = false; // Unmute before playing
+          audio.play().then(() => {
+            console.log("Audio playback started after user interaction.");
+            document.body.removeEventListener("click", handleClick); // Remove listener after successful playback
+          }).catch((err) => {
+            console.error("Error playing audio:", err);
+          });
+        });
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    console.log("Loading external link...");
+
+    // Replace 'new.html' with your desired page
+    const link = "new.html";
+
+    // Delay for 60 seconds (1 minute)
+    setTimeout(() => {
+      document.getElementById('nine').innerHTML = `
+         <p>I really want to ask you something...</p>
+      `;
+    }, 60000);
+    setTimeout(() => {
+      document.getElementById('nine').innerHTML = `
+         <p>Answer the question carefully, and for this, the music will stop...</p>
+      `;
+    }, 62000);
+
+    // Redirect after 65 seconds
+    setTimeout(() => {
+      window.location.href = link;
+    }, 65000); // Redirect after 65 seconds
+  });
+  </script>
+  
+  
+    
+  </body>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script type="text/babel" src="script/main.js"></script>
+</html>
